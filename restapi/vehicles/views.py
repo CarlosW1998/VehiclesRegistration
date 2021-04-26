@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from vehicles.models import Vehicle
+from rest_framework import permissions
 from vehicles.serializers import VehiclesSerializer
 from rest_framework import viewsets
 
@@ -10,4 +11,4 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Vehicle.objects.all()
     serializer_class = VehiclesSerializer
-    #permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]

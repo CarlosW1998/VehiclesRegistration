@@ -5,7 +5,7 @@ from vehicles.serializers import VehiclesSerializer
 from rest_framework import viewsets
 
 
-class GroupViewSet(viewsets.ModelViewSet):
+class VehicleViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Vehicles to be viewed or edited.
     """

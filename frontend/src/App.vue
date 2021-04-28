@@ -3,6 +3,7 @@
     <div class="md-layout-item"></div>
     <div class="md-layout-item">
       <div class="components">
+        <ListComponent v-if="currentRender == 'List'"/>
         <AddComponent v-if="currentRender == 'Add'"/>
       </div>
       <div class="phone-viewport">
@@ -22,6 +23,7 @@
 
 <script>
 import AddComponent from './components/AddComponent'
+import ListComponent from './components/ListComponent';
 export default {
   name: 'App',
   data: function () {
@@ -30,6 +32,7 @@ export default {
     }
   },
   components: {
+    ListComponent,
     AddComponent,
   },
   methods: {
@@ -56,6 +59,7 @@ export default {
     height: 400px;
     overflow-y: scroll;
     overflow-x: hidden;
+    background-color: white;
 
   }
 </style>

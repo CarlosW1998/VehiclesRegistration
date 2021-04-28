@@ -3,7 +3,7 @@
     <div class="md-layout-item"></div>
     <div class="md-layout-item">
       <div class="components">
-        
+        <AddComponent v-if="currentRender == 'Add'"/>
       </div>
       <div class="phone-viewport">
         <md-bottom-bar md-type="shift">
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-
+import AddComponent from './components/AddComponent'
 export default {
   name: 'App',
   data: function () {
@@ -30,6 +30,7 @@ export default {
     }
   },
   components: {
+    AddComponent,
   },
   methods: {
     setRender: function (newRender) {

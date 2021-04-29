@@ -3,7 +3,7 @@
     <div class="md-layout-item"></div>
     <div class="md-layout-item">
       <div class="components">
-        <ListComponent v-if="currentRender == 'List'"/>
+        <ListComponent ref='vehicleList' v-if="currentRender == 'List'"/>
         <AddComponent v-if="currentRender == 'Add'"/>
       </div>
       <div class="phone-viewport">
@@ -37,6 +37,9 @@ export default {
   },
   methods: {
     setRender: function (newRender) {
+      if(newRender == 'List' && this.currentRender == 'List'){
+        this.$refs.vehicleList.render = 'List'
+      }
       this.currentRender = newRender;
     },
 

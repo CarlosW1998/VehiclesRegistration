@@ -56,7 +56,7 @@ export default {
   }
   .components{
     width: 400px;
-    height: 400px;
+    height: 530px;
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: white;
